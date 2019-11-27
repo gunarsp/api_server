@@ -1,3 +1,27 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+bsb:
+  path: /bsb
+  controller: App\Controller\BsbController::index
+
+bsb_insert:
+  path: /api_ibank/api/query/insert/{type}
+  controller: App\Controller\BsbController::insert
+
+bsb_queries:
+  path: /api_ibank/api/queries
+  controller: App\Controller\BsbController::queries
+
+bsb_get_mcode:
+  path: /api_ibank/api/queries/mcode
+  controller: App\Controller\BsbController::getMcode
+
+bsb_confirm_mcode:
+  path: /api_ibank/api/queries/sign/sms
+  controller: App\Controller\BsbController::confirmMcode
+
+bsb_send_confirmed_statement:
+  path: /api_ibank/api/queries/{queryId}/send
+  controller: App\Controller\BsbController::sendConfirmedStatement
